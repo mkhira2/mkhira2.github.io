@@ -1,2 +1,4 @@
 # mkhira2.github.io
-personal blog
+
+## Screenshot
+![Blog Screenshot](images/blog.png)
