@@ -17,7 +17,7 @@
     
     <body>
         <h1>&#128075; Hello!</h1>
-        <img src="./images/kenjiAvatar.png" alt="Kenji Hirabayashi" width="162px" height="200px" class="avatar" onclick="showFaceModal()">
+        <img src="./images/kenjiAvatar.png" alt="Kenji Hirabayashi" width="162px" height="200px" class="avatar">
         <h2>My name is Kenji Hirabayashi.</h2>
         <h2>I'm a software engineer.</h2>
         <h3>
@@ -30,27 +30,4 @@
             <a href="https://tinyurl.com/24snsj22" target="_blank" rel="noopener"><i title="Resume"
                     class="fa fa-pencil-square fa-3x"></i></a>
         </h3>
-    
-        <div id="faceModal" class="face-modal">
-            <div class="face-modal-content">
-                <p>Ouch! My face!</p>
-                <span class="face-modal-close" onclick="closeModal()">&times;</span>
-            </div>
-        </div>
-    
-        <script>
-            function showFaceModal() {
-                document.getElementById("faceModal").style.display = "block";
-            }
-    
-            function closeModal() {
-                document.getElementById("faceModal").style.display = "none";
-            }
-    
-            window.onclick = function(event) {
-                if (event.target == document.getElementById("faceModal")) {
-                    closeModal();
-                }
-            }
-        </script>
     </body>
