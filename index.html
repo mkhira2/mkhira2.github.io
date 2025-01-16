@@ -2,34 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kenji Hirabayashi - Software Engineer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
-    <script>(function (d) { var s = d.createElement("script"); s.setAttribute("data-account", "BeXrBJb5XN"); s.setAttribute("src", "https://cdn.userway.org/widget.js"); (d.body || d.head).appendChild(s); })(document)</script>
-    <noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website
-            accessibility</a></noscript>
-    <title>Kenji Hirabayashi</title>
-</head>
-
-<body>
-    <h1>&#128075; Hello!</h1>
-    <img src="./images/kenjiAvatar.png" alt="Kenji Hirabayashi" width="162px" height="200px" class="avatar">
-    <h2>My name is Kenji Hirabayashi.</h2>
-    <h2>I'm a software engineer.</h2>
-    <h3>
-        <a href="https://www.linkedin.com/in/mkhira2/" target="_blank" rel="noopener"><i title="LinkedIn"
-                class="fa fa-linkedin-square fa-3x"></i></a>
-        <span class="spacer"></span>
-        <a href="https://www.github.com/mkhira2/" target="_blank" rel="noopener"><i title="GitHub"
-                class="fa fa-github-square fa-3x"></i></a>
-        <span class="spacer"></span>
-        <a href="https://tinyurl.com/24snsj22" target="_blank" rel="noopener"><i title="Resume"
-                class="fa fa-pencil-square fa-3x"></i></a>
-    </h3>
-</body>
-
-</html>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Kenji Hirabayashi - Software Engineer">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="icon" type="image/x-icon" href="./favicon.ico">
+        <script>(function (d) { var s = d.createElement("script"); s.setAttribute("data-account", "BeXrBJb5XN"); s.setAttribute("src", "https://cdn.userway.org/widget.js"); (d.body || d.head).appendChild(s); })(document)</script>
+        <noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website
+                accessibility</a></noscript>
+        <title>Kenji Hirabayashi</title>
+    </head>
+    
+    <body>
+        <h1>&#128075; Hello!</h1>
+        <img src="./images/kenjiAvatar.png" alt="Kenji Hirabayashi" width="162px" height="200px" class="avatar" onclick="showFaceModal()">
+        <h2>My name is Kenji Hirabayashi.</h2>
+        <h2>I'm a software engineer.</h2>
+        <h3>
+            <a href="https://www.linkedin.com/in/mkhira2/" target="_blank" rel="noopener"><i title="LinkedIn"
+                    class="fa fa-linkedin-square fa-3x"></i></a>
+            <span class="spacer"></span>
+            <a href="https://www.github.com/mkhira2/" target="_blank" rel="noopener"><i title="GitHub"
+                    class="fa fa-github-square fa-3x"></i></a>
+            <span class="spacer"></span>
+            <a href="https://tinyurl.com/24snsj22" target="_blank" rel="noopener"><i title="Resume"
+                    class="fa fa-pencil-square fa-3x"></i></a>
+        </h3>
+    
+        <div id="faceModal" class="face-modal">
+            <div class="face-modal-content">
+                <p>Ouch! My face!</p>
+                <span class="face-modal-close" onclick="closeModal()">&times;</span>
+            </div>
+        </div>
+    
+        <script>
+            function showFaceModal() {
+                document.getElementById("faceModal").style.display = "block";
+            }
+    
+            function closeModal() {
+                document.getElementById("faceModal").style.display = "none";
+            }
+    
+            window.onclick = function(event) {
+                if (event.target == document.getElementById("faceModal")) {
+                    closeModal();
+                }
+            }
+        </script>
+    </body>
